@@ -1,0 +1,46 @@
+= Red Hat OpenShift IPI Installation
+Álvaro López Medina <alopezme@redhat.com>
+v1.0, 2024-03
+// Metadata
+:description: This repository explores the basics of OpenShift IPI installations.
+:keywords: openshift, red hat, installation, ipi
+// Create TOC wherever needed
+:toc: macro
+:sectanchors:
+:sectnumlevels: 2
+:sectnums: 
+:source-highlighter: pygments
+:imagesdir: docs/images
+// Start: Enable admonition icons
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+// Icons for GitHub
+:yes: :heavy_check_mark:
+:no: :x:
+endif::[]
+ifndef::env-github[]
+:icons: font
+// Icons not for GitHub
+:yes: icon:check[]
+:no: icon:times[]
+endif::[]
+// End: Enable admonition icons
+
+This repository explores the basics of OpenShift IPI installations.
+
+== Choose your installation method
+
+There are three installation models of Red Hat OpenShift, *UPI* for enterprise deployments, *IPI* for small deployments, and *ABI* oriented to air-gapped and restricted environments.
+
+* *Installer-Provisioned Infrastructure* (IPI) is one of the most straightforward installation methods. It's suitable for users who want a guided, automated installation experience. In IPI, OpenShift provisions infrastructure including virtual machines or physical hardware.
+* *Agent Based Installer* (ABI) comprises a bootable ISO that contains the Assisted discovery agent and the Assisted Service. Agent-based installation is a subcommand of the OpenShift installer. It generates a bootable ISO image containing all of the assets required to deploy an OpenShift cluster
+* *User-Provisioned Infrastructure* (UPI) is a flexible installation method for users who prefer to manage their own infrastructure. With UPI, users are responsible for provisioning virtual machines, storage, and networking components such as a load balancer.
+
+In this repository, we will explore the benefit of IPI installation in bare-metal environments.
+
+
+
