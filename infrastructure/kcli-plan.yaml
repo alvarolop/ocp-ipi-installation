@@ -1,0 +1,60 @@
+master01.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.10
+      mask: 255.255.255.0
+      gateway: 192.168.122.1
+master02.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.11
+      mask: 255.255.255.0
+      gateway: 192.168.122.1
+master03.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.12
+      mask: 255.255.255.0
+      gateway: 192.168.122.1
+worker01.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.20
+      mask: 255.255.255.0
+      gateway: 192.168.122.1
+worker01.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.21
+      mask: 255.255.255.0
+      gateway: 192.168.122.1
+worker01.ocp4:
+  numcpus: 4
+  memory: 16384
+  disks:
+    - size: 50
+  nets:
+    - name: default
+      ip: 192.168.122.22
+      mask: 255.255.255.0
+      gateway: 192.168.122.1

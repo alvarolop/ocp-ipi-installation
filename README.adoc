@@ -5,7 +5,7 @@ v1.0, 2024-03
 :description: This repository explores the basics of OpenShift IPI installations.
 :keywords: openshift, red hat, installation, ipi
 // Create TOC wherever needed
-:toc: macro
+:toc:
 :sectanchors:
 :sectnumlevels: 2
 :sectnums: 
@@ -43,9 +43,93 @@ There are three installation models of Red Hat OpenShift, *UPI* for enterprise d
 In this repository, we will explore the benefit of IPI installation in bare-metal environments.
 
 
+== Infrastructure
+
+[source, bash]
+----
+kcli create plan -f infrastructure/kcli-plan.yaml ocp4
+----
+
+
+
+
 == Prerequisites
 
-* DNS configuration.
-* Mirrored container images
+
+=== Install binaries
+
+* `oc`. Add bash completion with:
+    ** `sudo bash -c 'oc completion bash > /etc/bash_completion.d/openshift'`
+* `openshift-install`. Add bash completion with:
+    ** `sudo bash -c 'openshift-install completion bash > /etc/bash_completion.d/openshift-install'`.
+* `butane`. Check this https://docs.openshift.com/container-platform/4.15/installing/install_config/installing-customizing.html#installation-special-config-butane_installing-customizing[link] for more information.
+
+
+=== DNS Configuration
+
+By default, you might configure the centralized DNS in your department. In this case, we will deploy a cluster in a lab environment with no access to centralized DNS. For that reason, we will configure our https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_networking_infrastructure_services/assembly_setting-up-and-configuring-a-bind-dns-server_networking-infrastructure-services[BIND DNS server]. BIND is a feature-rich DNS server that is fully compliant with the Internet Engineering Task Force (IETF) DNS standards and draft standards.
+
+First, install the bind RPM packages:
+
+[source, bash]
+----
+sudo dnf install bind bind-utils
+----
+
+Second, 
+
+
+
+
+=== Quay Registry (If disconnected)
+
+
+
+=== Kubeconfig and pull secret
+
+
+
+
+=== Mirror container images
+
+
+
+
+
+
+
+== Installation
+
+
+openshift-install explain installconfig
+
+
+
+== Postinstall
+
+
+=== Update API and Ingress certificates
+
+NOTE: Check if API is needed.
+
+
+=== Authentication and authorization
+
+
+
+NOTE: Now, you can disable `kubeadmin`.
+
+NOTE: Now, you can configure LDAP group sync CronJob.
+
+
+=== Infrastructure-dedicated nodes
+
+
+
+
+== Useful resources
+
+
+
 
 
