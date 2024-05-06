@@ -5,6 +5,20 @@ tag: 4.14
 bmc_user: bmcuser
 bmc_password: bmcpass
 baremetal_cidr: 192.168.122.0/24
+baremetal_ips:
+- 192.168.122.20
+- 192.168.122.21
+- 192.168.122.22
+- 192.168.122.23
+- 192.168.122.24
+- 192.168.122.25
+baremetal_macs:
+- aa:aa:aa:aa:bb:01
+- aa:aa:aa:aa:bb:02
+- aa:aa:aa:aa:bb:03
+- aa:aa:aa:aa:bb:04
+- aa:aa:aa:aa:bb:05
+- aa:aa:aa:aa:bb:06
 api_ip: 192.168.122.2
 ingress_ip: 192.168.122.4
 virtual_ctlplanes: False

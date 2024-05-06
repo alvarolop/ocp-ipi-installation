@@ -45,9 +45,27 @@ In this repository, we will explore the benefit of IPI installation in bare-meta
 
 == Infrastructure
 
+This section leverages `kcli` to create the VMs that will simulate the OCP nodes in which we will install OpenShift using the IPI installation method. It is important that you check these links before installing the plan:
+
+* `kcli` https://kcli.readthedocs.io/en/latest[documentation].
+* `kcli` https://github.com/karmab/kcli-openshift4-baremetal/tree/main[OCP 4 baremetal plan].
+* `kcli` https://ocp-baremetal-ipi-lab.readthedocs.io/en/latest/#[lab to understand its basics].
+
+Then, just execute the following command to deploy your infrastructure:
+
 [source, bash]
 ----
-kcli create plan -f infrastructure/kcli-plan.yaml ocp4
+kcli create plan ocp4 \
+    -f kcli-openshift4-baremetal/kcli_plan_infra.yml \
+    --paramfile ocp-ipi-installation/infrastructure/parameters.yml 
+----
+
+You can see the created VMs with the following command:
+
+[source, bash]
+----
+$ kcli list vm
+
 ----
 
 
