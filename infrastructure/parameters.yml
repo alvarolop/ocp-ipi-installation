@@ -1,0 +1,24 @@
+cluster: lab
+domain: ocp4
+version: stable
+tag: 4.14
+bmc_user: bmcuser
+bmc_password: bmcpass
+baremetal_cidr: 192.168.122.0/24
+api_ip: 192.168.122.2
+ingress_ip: 192.168.122.4
+virtual_ctlplanes: False
+ctlplanes:
+- redfish_address: 10.0.0.1
+  provisioning_mac: aa:aa:aa:bb:cc:01
+- redfish_address: 10.0.0.2
+  provisioning_mac: aa:aa:aa:bb:cc:02
+- ipmi_address: 10.0.0.3
+  provisioning_mac: aa:aa:aa:bb:cc:03
+workers:
+- redfish_address: 10.0.0.4
+  provisioning_mac: aa:aa:aa:bb:cc:04
+- redfish_address: 10.0.0.5
+  provisioning_mac: aa:aa:aa:bb:cc:05
+- redfish_address: 10.0.0.6
+  provisioning_mac: aa:aa:aa:bb:cc:06
