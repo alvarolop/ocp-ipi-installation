@@ -1,5 +1,5 @@
-cluster: lab
-domain: ocp4
+cluster: openshift
+domain: ocp4.lab
 version: stable
 tag: 4.14
 bmc_user: bmcuser
